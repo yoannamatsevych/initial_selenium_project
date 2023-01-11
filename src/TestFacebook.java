@@ -20,7 +20,7 @@ public class TestFacebook {
         if(driver.getCurrentUrl().equals("https://www.facebook.com/")) System.out.println("URL validation PASSED");
         else System.out.println("URL validation FAIL");
 
-        if( driver.findElement(By.className("_8ice")).isDisplayed()) System.out.println("Logo validation PASSED");
+        if( driver.findElement(By.xpath("//div[@class='_8ice']/img")).isDisplayed()) System.out.println("Logo validation PASSED");
         else System.out.println("Logo validation FAILED");
 
         if( driver.findElement(By.xpath("//h2[@class='_8eso']")).isDisplayed()) System.out.println("H2 validation PASSED");
@@ -45,6 +45,15 @@ public class TestFacebook {
         if(driver.findElement(By.xpath("//a[@ajaxify='/reg/spotlight/']")).isDisplayed())
             System.out.println("\"Create new account button\" validation PASSED");
         else System.out.println("\"Create new account button\" validation FAILED");
+
+
+//    System.out.println(driver.findElement(By.className("fb_logo")).isDisplayed());
+//    System.out.println(driver.findElement(By.className("_8eso")).getText());
+//    System.out.println(driver.findElement(By.id("email")).isDisplayed());
+//    System.out.println(driver.findElement(By.id("pass")).isDisplayed());
+//    System.out.println(driver.findElement(By.cssSelector("button[data-testid='royal_login_button']")).getText());
+//    System.out.println(driver.findElement(By.cssSelector("._6ltj>a")).getText());
+//    System.out.println(driver.findElement(By.cssSelector("a[id*='u_0_0_']")).getText());
 
 
         Driver.quitDriver();
