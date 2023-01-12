@@ -21,4 +21,8 @@ public class TechGlobalUtil {
 
     }
 
+    public static void clickOnCard(int cardNumber){
+        Driver.getDriver().findElement(By.id("card-" + cardNumber)).click();
+    }
+
 }
